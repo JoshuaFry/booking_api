@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'djoser',
 
     'core',
+    'user',
     'booking',
     'session',
     'time_block',
@@ -116,6 +117,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
 }
+
+AUTH_USER_MODEL = 'core.User'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
