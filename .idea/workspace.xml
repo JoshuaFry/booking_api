@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfaa80a8-0a16-4970-9de7-fe42db19343e" name="Default Changelist" comment="" />
+    <list default="true" id="bfaa80a8-0a16-4970-9de7-fe42db19343e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/user/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/tests/test_serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596812318698</updated>
-      <workItem from="1596812328374" duration="3090000" />
+      <workItem from="1596812328374" duration="5126000" />
     </task>
     <servers />
   </component>
