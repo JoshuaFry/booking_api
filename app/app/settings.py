@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'djoser',
 
     'core',
+    'booking',
+    'session',
+    'time_block',
 ]
 
 MIDDLEWARE = [
