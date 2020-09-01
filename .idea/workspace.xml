@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfaa80a8-0a16-4970-9de7-fe42db19343e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/user/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/user/tests/test_serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/user/tests/test_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/booking/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/session/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/time_block/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/user/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/tests/test_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,13 +37,15 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/user" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\josh-\booking_api\app\user" />
       <recent name="C:\Users\josh-\booking_api\app\time_block" />
-      <recent name="C:\Users\josh-\booking_api\app\booking" />
       <recent name="C:\Users\josh-\booking_api\app\session" />
+      <recent name="C:\Users\josh-\booking_api\app\booking" />
       <recent name="C:\Users\josh-\booking_api\app\core\tests" />
     </key>
   </component>
@@ -90,7 +96,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596812318698</updated>
-      <workItem from="1596812328374" duration="8478000" />
+      <workItem from="1596812328374" duration="18197000" />
+      <workItem from="1597105139283" duration="2292000" />
+      <workItem from="1597768779135" duration="519000" />
+      <workItem from="1598966931599" duration="2823000" />
     </task>
     <servers />
   </component>
@@ -102,7 +111,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
