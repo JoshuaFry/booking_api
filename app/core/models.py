@@ -13,18 +13,19 @@ from app import settings
 
 class UserManager(BaseUserManager):
 
-    def create_user(self, password=None, **extra_fields):
+    def create_user(self, password=None, email=None, username=None, **extra_fields):
         """Creates and saves a new user"""
-        if not password:
-            raise ValueError('User must pass password to create an account')
-
         user = self.model(
+            username=username.lower(),
+            email=email.lower(),
             **extra_fields
         )
+        user.normalize_username(user.username)
 
         user.full_clean(exclude=['password'])
         try:
             validators.validate_password(password=password, user=user)
+
         except ValidationError as e:
             raise ValueError(list(e.messages))
 
@@ -34,14 +35,10 @@ class UserManager(BaseUserManager):
 
         return user
 
-    def create_superuser(self, email, first_name, last_name, password, username):
+    def create_superuser(self, **extra_fields):
         """Create and saves a new superuser"""
         user = self.create_user(
-            email=email,
-            first_name=first_name,
-            last_name=last_name,
-            password=password,
-            username=username.lower()
+            **extra_fields
         )
         user.is_staff = True
         user.is_superuser = True
@@ -52,17 +49,22 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=255, unique=True)
-    first_name = models.CharField(max_length=32)
-    last_name = models.CharField(max_length=32)
     username_regex = RegexValidator(regex=r'[a-z]{5,15}', message='Username must be all lower case & 5-15 characters')
-    username = models.CharField(validators=[username_regex, ], max_length=15, unique=True, blank=False, null=False)
+    username = models.CharField(validators=[username_regex, ], max_length=15, unique=True)
 
-    company = models.EmailField(max_length=255, unique=False, blank=True, null=True)
+    is_staff = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ["email", "first_name", "last_name"]
+    REQUIRED_FIELDS = ["email", ]
 
     objects = UserManager()
+
+# class Profile(models.Model):
+#     first_name = models.CharField(max_length=32)
+#     last_name = models.CharField(max_length=32)
+#
+#     company = models.EmailField(max_length=255, unique=False, blank=True, null=True)
+
 
 
 class Session(models.Model):

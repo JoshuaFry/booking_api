@@ -22,5 +22,6 @@ urlpatterns = [
 
     url(r'^auth/', include('djoser.urls')),
     url(r'^auth/', include('djoser.urls.authtoken')),
+    path('account/', include('user.urls')),
 
 ]

@@ -29,13 +29,13 @@ CORS_ORIGIN_ALLOW_ALL = DEBUG
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
@@ -129,6 +129,13 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'core.User'
 
+DJSOER = {
+    'USER_CREATE_PASSWORD_RETYPE': True,
+
+    'SERIALIZERS': {
+        'user_create': 'core.user.serializer.UserSerializer'
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
